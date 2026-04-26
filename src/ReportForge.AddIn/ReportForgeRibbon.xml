@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ribbon XML 备份文件 - 实际使用 RibbonXml.cs 中的嵌入 XML -->
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+  <ribbon>
+    <tabs>
+      <tab id="rfTab" label="报告格式化" insertAfterMso="TabView">
+        <group id="rfGroupSpec" label="规范管理">
+          <button id="rfInitStyles" label="初始化样式" size="large" imageMso="StylesPane" onAction="OnInitializeStyles" />
+        </group>
+        <group id="rfGroupStyle" label="样式应用">
+          <button id="rfBodyText" label="正文" size="normal" imageMso="ParagraphDialog" onAction="OnApplyBodyStyle" />
+          <button id="rfH1" label="一级标题" tag="1" size="normal" imageMso="OutlinePromote" onAction="OnApplyHeadingStyle" />
+          <button id="rfH2" label="二级标题" tag="2" size="normal" imageMso="OutlineDemote" onAction="OnApplyHeadingStyle" />
+          <button id="rfH3" label="三级标题" tag="3" size="normal" imageMso="OutlineDemote" onAction="OnApplyHeadingStyle" />
+          <button id="rfH4" label="四级标题" tag="4" size="normal" imageMso="OutlineDemote" onAction="OnApplyHeadingStyle" />
+          <button id="rfFigCaption" label="图题" size="normal" imageMso="CaptionInsert" onAction="OnInsertFigureCaption" />
+          <button id="rfTblCaption" label="表题" size="normal" imageMso="CaptionInsert" onAction="OnInsertTableCaption" />
+          <button id="rfStdTable" label="标准表格" size="normal" imageMso="TableInsert" onAction="OnApplyStandardTable" />
+        </group>
+        <group id="rfGroupStructure" label="文档结构">
+          <button id="rfUpdateTOC" label="更新目录" size="large" imageMso="TableOfContentsUpdateClassic" onAction="OnUpdateTOC" />
+        </group>
+        <group id="rfGroupRepair" label="修复与巡检">
+          <button id="rfFullRepair" label="全文修复" size="large" imageMso="ReviewTrackChanges" onAction="OnFullRepair" />
+          <button id="rfInspect" label="格式巡检" size="large" imageMso="ReviewCompareMenu" onAction="OnRunInspection" />
+          <button id="rfClearDF" label="清理直接格式" size="normal" imageMso="ClearFormatting" onAction="OnClearDirectFormatting" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

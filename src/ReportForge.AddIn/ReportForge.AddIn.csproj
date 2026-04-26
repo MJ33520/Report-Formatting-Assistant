@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ReportForge.AddIn</RootNamespace>
+    <AssemblyName>ReportForge.AddIn</AssemblyName>
+    <Version>7.0.0</Version>
+    <Company>江老师工作室</Company>
+    <Authors>江老师</Authors>
+    <Copyright>Copyright © 2026 江老师 | CC BY-NC-SA 4.0 | 永久免费，禁止商用</Copyright>
+    <Description>政府公文报告格式化工具 | 江老师借天才程序员手搓</Description>
+    <Product>ReportForge</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReportForge.Core\ReportForge.Core.csproj" />
+    <ProjectReference Include="..\ReportForge.Engine\ReportForge.Engine.csproj" />
+    <ProjectReference Include="..\ReportForge.WordAdapter\ReportForge.WordAdapter.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1004" />
+    <PackageReference Include="stdole" Version="7.0.3001" />
+  </ItemGroup>
+
+  <!-- VSTO Runtime References -->
+  <PropertyGroup>
+    <VstoRefBase>D:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\ReferenceAssemblies\v4.0</VstoRefBase>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.Word.v4.0.Utilities">
+      <HintPath>$(VstoRefBase)\Microsoft.Office.Tools.Word.v4.0.Utilities.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.v4.0.Framework">
+      <HintPath>$(VstoRefBase)\Microsoft.Office.Tools.v4.0.Framework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Common.v4.0.Utilities">
+      <HintPath>$(VstoRefBase)\Microsoft.Office.Tools.Common.v4.0.Utilities.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Word">
+      <HintPath>$(VstoRefBase)\Microsoft.Office.Tools.Word.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Common">
+      <HintPath>$(VstoRefBase)\Microsoft.Office.Tools.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools">
+      <HintPath>$(VstoRefBase)\Microsoft.Office.Tools.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime">
+      <HintPath>$(VstoRefBase)\Microsoft.VisualStudio.Tools.Applications.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="office">
+      <HintPath>$(VstoRefBase)\Office15\Office.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Extensibility">
+      <HintPath>D:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\PublicAssemblies\extensibility.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ReportForgeRibbon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,111 @@
+﻿{
+  "_comment": "ReportForge 格式配置文件 | 永久免费，禁止商用 | CC BY-NC-SA 4.0",
+  "_author": "江老师借天才程序员手搓",
+  "displayName": "政府公文报告格式",
+  "pageSetup": {
+    "paperSize": "A4",
+    "margins": {
+      "topCm": 3.0,
+      "bottomCm": 3.0,
+      "leftCm": 2.6,
+      "rightCm": 2.6,
+      "gutterCm": 0.0
+    },
+    "headerDistanceCm": 1.5,
+    "footerDistanceCm": 2.0
+  },
+  "bodyStyle": {
+    "fontZh": "仿宋_GB2312",
+    "fontLatin": "Times New Roman",
+    "fontSizePt": 14.0,
+    "lineSpacingRule": "Exact",
+    "lineSpacingValue": 30.0,
+    "firstLineIndentChars": 2.0
+  },
+  "headings": [
+    {
+      "level": 1,
+      "fontZh": "黑体",
+      "fontLatin": "Times New Roman",
+      "fontSizePt": 16.0,
+      "bold": true
+    },
+    {
+      "level": 2,
+      "fontZh": "楷体",
+      "fontLatin": "Times New Roman",
+      "fontSizePt": 16.0,
+      "bold": false
+    },
+    {
+      "level": 3,
+      "fontZh": "仿宋_GB2312",
+      "fontLatin": "Times New Roman",
+      "fontSizePt": 14.0,
+      "bold": true
+    },
+    {
+      "level": 4,
+      "fontZh": "仿宋_GB2312",
+      "fontLatin": "Times New Roman",
+      "fontSizePt": 14.0,
+      "bold": true
+    },
+    {
+      "level": 5,
+      "fontZh": "仿宋_GB2312",
+      "fontLatin": "Times New Roman",
+      "fontSizePt": 14.0,
+      "bold": false
+    },
+    {
+      "level": 6,
+      "fontZh": "仿宋_GB2312",
+      "fontLatin": "Times New Roman",
+      "fontSizePt": 14.0,
+      "bold": false
+    },
+    {
+      "level": 7,
+      "fontZh": "仿宋_GB2312",
+      "fontLatin": "Times New Roman",
+      "fontSizePt": 14.0,
+      "bold": false
+    },
+    {
+      "level": 8,
+      "fontZh": "仿宋_GB2312",
+      "fontLatin": "Times New Roman",
+      "fontSizePt": 14.0,
+      "bold": false
+    },
+    {
+      "level": 9,
+      "fontZh": "仿宋_GB2312",
+      "fontLatin": "Times New Roman",
+      "fontSizePt": 14.0,
+      "bold": false
+    }
+  ],
+  "table": {
+    "outsideBorderPt": 1.5,
+    "insideBorderPt": 0.5,
+    "headerFontZh": "黑体",
+    "headerFontSizePt": 12.0,
+    "bodyFontZh": "仿宋_GB2312",
+    "bodyFontLatin": "Times New Roman",
+    "bodyFontSizePt": 12.0,
+    "lineSpacingPt": 23.0
+  },
+  "numbering": [
+    "一、二、三、",
+    "（（一）（二）",
+    "1. 2. 3.",
+    "1) 2) 3)",
+    "①②③",
+    "a) b) c)",
+    "((1)(2)(3)",
+    "i) ii) iii)",
+    "A) B) C)"
+  ]
+}

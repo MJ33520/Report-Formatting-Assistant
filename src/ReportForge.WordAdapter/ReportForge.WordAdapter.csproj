@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+      <Version>7.0.0</Version>
+    <Company>江老师工作室</Company>
+    <Authors>江老师</Authors>
+    <Copyright>Copyright ? 2026 江老师 | CC BY-NC-SA 4.0 | 永久免费，禁止商用</Copyright>
+    <Description>政府公文报告格式化工具 | 江老师借天才程序员手搓</Description>
+    <Product>ReportForge</Product>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReportForge.Core\ReportForge.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1004" />
+  </ItemGroup>
+</Project>

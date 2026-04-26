@@ -1,0 +1,143 @@
+{
+  "id": "gov-report-default",
+  "version": "1.0",
+  "locale": "zh-CN",
+  "displayName": {
+    "zh-CN": "政府公文报告格式",
+    "en-US": "Government Report Format"
+  },
+  "pageSetup": {
+    "paperSize": "A4",
+    "margins": { "topCm": 3.0, "bottomCm": 3.0, "leftCm": 2.6, "rightCm": 2.6, "gutterCm": 0.0 },
+    "headerDistanceCm": 1.5,
+    "footerDistanceCm": 2.0
+  },
+  "headingLevels": [
+    {
+      "id": "heading.level1",
+      "displayName": { "zh-CN": "一级标题", "en-US": "Heading 1" },
+      "isBodyStructure": true,
+      "styleId": "RF_Heading1",
+      "outlineLevel": 1, "numberingLevel": 0,
+      "font": { "zh": "黑体", "latin": "Times New Roman" },
+      "fontSizePt": 16.0,
+      "bold": true, "italic": false,
+      "alignment": "center",
+      "lineSpacing": { "rule": "exact", "value": 30.0 },
+      "spaceBeforePt": 0.0, "spaceAfterPt": 0.0,
+      "pageBreakBefore": false,
+      "includeInTOC": true, "includeInNavPane": true,
+      "isCaptionChapterBasis": true
+    },
+    {
+      "id": "heading.level2",
+      "displayName": { "zh-CN": "二级标题", "en-US": "Heading 2" },
+      "isBodyStructure": true,
+      "styleId": "RF_Heading2",
+      "outlineLevel": 2, "numberingLevel": 1,
+      "font": { "zh": "楷体", "latin": "Times New Roman" },
+      "fontSizePt": 16.0,
+      "bold": false,
+      "alignment": "left",
+      "firstLineIndent": { "unit": "chars", "value": 2.0 },
+      "lineSpacing": { "rule": "exact", "value": 30.0 },
+      "includeInTOC": true, "includeInNavPane": true
+    },
+    {
+      "id": "heading.level3",
+      "displayName": { "zh-CN": "三级标题", "en-US": "Heading 3" },
+      "isBodyStructure": true,
+      "styleId": "RF_Heading3",
+      "outlineLevel": 3, "numberingLevel": 2,
+      "font": { "zh": "仿宋_GB2312", "latin": "Times New Roman" },
+      "fontSizePt": 14.0,
+      "bold": true,
+      "alignment": "left",
+      "firstLineIndent": { "unit": "chars", "value": 2.0 },
+      "lineSpacing": { "rule": "exact", "value": 30.0 },
+      "includeInTOC": true
+    },
+    {
+      "id": "heading.level4",
+      "displayName": { "zh-CN": "四级标题", "en-US": "Heading 4" },
+      "isBodyStructure": true,
+      "styleId": "RF_Heading4",
+      "outlineLevel": 4, "numberingLevel": 3,
+      "font": { "zh": "仿宋_GB2312", "latin": "Times New Roman" },
+      "fontSizePt": 14.0,
+      "bold": true,
+      "alignment": "left",
+      "firstLineIndent": { "unit": "chars", "value": 2.0 },
+      "lineSpacing": { "rule": "exact", "value": 30.0 },
+      "includeInTOC": false
+    }
+  ],
+  "numberingScheme": {
+    "id": "gov-cn-mixed",
+    "displayName": { "zh-CN": "政府公文混合编号", "en-US": "Gov Mixed Numbering" },
+    "levels": [
+      { "level": 0, "format": "chineseCounting", "prefix": "", "suffix": "、", "startAt": 1, "example": "一、二、三、" },
+      { "level": 1, "format": "chineseCounting", "prefix": "（", "suffix": "）", "startAt": 1, "example": "（一）（二）" },
+      { "level": 2, "format": "arabic", "prefix": "", "suffix": ".", "startAt": 1, "example": "1. 2. 3." },
+      { "level": 3, "format": "composite", "template": "{L3}{L4}", "startAt": 1, "example": "1) 2)" },
+      { "level": 4, "format": "composite", "template": "{L3}{L4}{L5}", "startAt": 1, "example": "1.1" },
+      { "level": 5, "format": "arabic", "prefix": "（", "suffix": "）", "startAt": 1, "example": "（1）" },
+      { "level": 6, "format": "circledNumber", "prefix": "", "suffix": "", "startAt": 1, "example": "①②③" }
+    ]
+  },
+  "bodyStyle": {
+    "styleId": "RF_BodyText",
+    "displayName": { "zh-CN": "正文", "en-US": "Body Text" },
+    "type": "paragraph",
+    "font": { "zh": "仿宋_GB2312", "latin": "Times New Roman" },
+    "fontSizePt": 14.0,
+    "bold": false, "italic": false,
+    "alignment": "justify",
+    "firstLineIndent": { "unit": "chars", "value": 2.0 },
+    "lineSpacing": { "rule": "exact", "value": 30.0 }
+  },
+  "captionConfig": {
+    "figure": {
+      "label": { "zh-CN": "图", "en-US": "Figure" },
+      "chapterNumbering": true, "separator": "-",
+      "position": "below", "styleId": "RF_FigureCaption",
+      "font": { "zh": "黑体", "latin": "Times New Roman" },
+      "fontSizePt": 10.5, "alignment": "center"
+    },
+    "table": {
+      "label": { "zh-CN": "表", "en-US": "Table" },
+      "chapterNumbering": true, "separator": "-",
+      "position": "above", "styleId": "RF_TableCaption",
+      "font": { "zh": "黑体", "latin": "Times New Roman" },
+      "fontSizePt": 10.5, "alignment": "center"
+    }
+  },
+  "tableStyle": {
+    "id": "RF_StandardTable",
+    "tableAlignment": "center",
+    "widthStrategy": "autoFitWindow",
+    "borders": {
+      "outside": { "style": "single", "widthPt": 1.5 },
+      "inside": { "style": "single", "widthPt": 0.5 }
+    },
+    "headerRow": {
+      "font": { "zh": "黑体", "latin": "Times New Roman" },
+      "fontSizePt": 12.0, "bold": true, "alignment": "center", "repeatOnNewPage": true
+    },
+    "bodyCell": {
+      "font": { "zh": "仿宋_GB2312", "latin": "Times New Roman" },
+      "fontSizePt": 12.0,
+      "lineSpacing": { "rule": "exact", "value": 23.0 }
+    },
+    "allowBreakAcrossPages": false
+  },
+  "sectionTemplates": [
+    { "id": "cover", "displayName": { "zh-CN": "封面" }, "pageNumbering": { "format": "none" }, "printMode": "singleSide", "linkToPrevious": false },
+    { "id": "toc", "displayName": { "zh-CN": "目录" }, "pageNumbering": { "format": "romanUpper", "start": 1, "position": "bottomCenter" }, "printMode": "singleSide", "linkToPrevious": false },
+    { "id": "main_body", "displayName": { "zh-CN": "正文" }, "pageNumbering": { "format": "arabic", "start": 1, "position": "bottomCenter", "font": { "latin": "Times New Roman" }, "fontSizePt": 10.5 }, "printMode": "doubleSide", "linkToPrevious": false },
+    { "id": "landscape_page", "displayName": { "zh-CN": "横向页面" }, "orientation": "landscape", "pageNumbering": { "continueFromPrevious": true } },
+    { "id": "appendix", "displayName": { "zh-CN": "附录" }, "pageNumbering": { "continueFromPrevious": true } }
+  ],
+  "tocConfig": { "maxLevel": 3, "showPageNumbers": true, "rightAlignPageNumbers": true, "useHyperlinks": true, "leaderType": "dots" },
+  "printConfig": { "coverSingleSide": true, "tocSingleSide": true, "bodySections": "double_side", "mirrorMargins": false }
+}

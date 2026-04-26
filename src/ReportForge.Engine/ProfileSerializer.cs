@@ -57,7 +57,8 @@ namespace ReportForge.Engine
                     ["fontZh"] = h.Font.Zh,
                     ["fontLatin"] = h.Font.Latin,
                     ["fontSizePt"] = h.FontSizePt,
-                    ["bold"] = h.Bold
+                    ["bold"] = h.Bold,
+                    ["firstLineIndentChars"] = h.FirstLineIndent?.Value ?? 0
                 });
             }
             obj["headings"] = headingsArr;
@@ -136,6 +137,11 @@ namespace ReportForge.Engine
                     if (h["fontLatin"] != null) target.Font.Latin = h["fontLatin"].ToString();
                     if (h["fontSizePt"] != null) target.FontSizePt = (double)h["fontSizePt"];
                     if (h["bold"] != null) target.Bold = (bool)h["bold"];
+                    if (h["firstLineIndentChars"] != null)
+                    {
+                        if (target.FirstLineIndent == null) target.FirstLineIndent = new IndentConfig { Unit = IndentUnit.Chars };
+                        target.FirstLineIndent.Value = (double)h["firstLineIndentChars"];
+                    }
                 }
             }
 

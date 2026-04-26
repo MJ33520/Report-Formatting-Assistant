@@ -23,6 +23,7 @@
       "fontSizePt": 16.0,
       "bold": true, "italic": false,
       "alignment": "center",
+      "firstLineIndent": { "unit": "chars", "value": 0.0 },
       "lineSpacing": { "rule": "exact", "value": 30.0 },
       "spaceBeforePt": 0.0, "spaceAfterPt": 0.0,
       "pageBreakBefore": false,

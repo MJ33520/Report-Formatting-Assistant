@@ -44,6 +44,15 @@ namespace ReportForge.AddIn
           <button id=""rfH6"" label=""六级"" tag=""6""
                   size=""normal"" imageMso=""OutlineDemote""
                   onAction=""OnApplyHeadingStyle"" screentip=""仿宋四号 a)"" />
+          <button id=""rfH7"" label=""七级"" tag=""7""
+                  size=""normal"" imageMso=""OutlineDemote""
+                  onAction=""OnApplyHeadingStyle"" screentip=""仿宋四号 (1)"" />
+          <button id=""rfH8"" label=""八级"" tag=""8""
+                  size=""normal"" imageMso=""OutlineDemote""
+                  onAction=""OnApplyHeadingStyle"" screentip=""仿宋四号 i)"" />
+          <button id=""rfH9"" label=""九级"" tag=""9""
+                  size=""normal"" imageMso=""OutlineDemote""
+                  onAction=""OnApplyHeadingStyle"" screentip=""仿宋四号 A)"" />
           <separator id=""rfSep2"" />
           <button id=""rfFigCaption"" label=""图题""
                   size=""normal"" imageMso=""CaptionInsert""

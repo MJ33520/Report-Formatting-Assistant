@@ -1,4 +1,4 @@
-﻿{
+{
   "_comment": "ReportForge 格式配置文件 | 永久免费，禁止商用 | CC BY-NC-SA 4.0",
   "_author": "江老师借天才程序员手搓",
   "displayName": "政府公文报告格式",
@@ -28,63 +28,72 @@
       "fontZh": "黑体",
       "fontLatin": "Times New Roman",
       "fontSizePt": 16.0,
-      "bold": true
+      "bold": true,
+      "firstLineIndentChars": 0.0
     },
     {
       "level": 2,
       "fontZh": "楷体",
       "fontLatin": "Times New Roman",
       "fontSizePt": 16.0,
-      "bold": false
+      "bold": false,
+      "firstLineIndentChars": 2.0
     },
     {
       "level": 3,
       "fontZh": "仿宋_GB2312",
       "fontLatin": "Times New Roman",
       "fontSizePt": 14.0,
-      "bold": true
+      "bold": true,
+      "firstLineIndentChars": 2.0
     },
     {
       "level": 4,
       "fontZh": "仿宋_GB2312",
       "fontLatin": "Times New Roman",
       "fontSizePt": 14.0,
-      "bold": true
+      "bold": true,
+      "firstLineIndentChars": 2.0
     },
     {
       "level": 5,
       "fontZh": "仿宋_GB2312",
       "fontLatin": "Times New Roman",
       "fontSizePt": 14.0,
-      "bold": false
+      "bold": false,
+      "firstLineIndentChars": 2.0
     },
     {
       "level": 6,
       "fontZh": "仿宋_GB2312",
       "fontLatin": "Times New Roman",
       "fontSizePt": 14.0,
-      "bold": false
+      "bold": false,
+      "firstLineIndentChars": 2.0
     },
     {
       "level": 7,
       "fontZh": "仿宋_GB2312",
       "fontLatin": "Times New Roman",
       "fontSizePt": 14.0,
-      "bold": false
+      "bold": false,
+      "firstLineIndentChars": 2.0
     },
     {
       "level": 8,
       "fontZh": "仿宋_GB2312",
       "fontLatin": "Times New Roman",
       "fontSizePt": 14.0,
-      "bold": false
+      "bold": false,
+      "firstLineIndentChars": 2.0
     },
     {
       "level": 9,
       "fontZh": "仿宋_GB2312",
       "fontLatin": "Times New Roman",
       "fontSizePt": 14.0,
-      "bold": false
+      "bold": false,
+      "firstLineIndentChars": 2.0
     }
   ],
   "table": {

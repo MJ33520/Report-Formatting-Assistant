@@ -177,6 +177,9 @@ namespace ReportForge.AddIn
             if (level < 1 || level > profile.HeadingLevels.Count) return;
             var heading = profile.HeadingLevels[level - 1];
             var doc = GetActiveDocAdapter();
+            
+            EnsureStylesAndNumbering(profile, doc);
+            
             _styleEngine!.ApplyStyleToSelection(doc, heading.StyleId);
         });
 
@@ -213,9 +216,7 @@ namespace ReportForge.AddIn
         {
             var profile = GetCurrentProfile();
             var doc = GetActiveDocAdapter();
-            _styleEngine!.InitializeTargetStyles(profile, doc);
-            _numberingEngine!.CreateNumberingScheme(doc, profile.NumberingScheme);
-            _numberingEngine.BindStylesToNumbering(doc, profile);
+            EnsureStylesAndNumbering(profile, doc);
             System.Windows.Forms.MessageBox.Show("目标样式体系已创建完成！", "ReportForge",
                 System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
         });
@@ -280,8 +281,8 @@ namespace ReportForge.AddIn
             var profile = GetCurrentProfile();
             var doc = GetActiveDocAdapter();
 
-            // 先确保样式已创建
-            _styleEngine!.InitializeTargetStyles(profile, doc);
+            // 先确保样式和编号体系已创建
+            EnsureStylesAndNumbering(profile, doc);
 
             // 分析文档
             var report = _smartFormatEngine!.Analyze(doc);
@@ -524,5 +525,12 @@ namespace ReportForge.AddIn
         }
 
         #endregion
+
+        private void EnsureStylesAndNumbering(Core.Models.FormatProfile profile, Core.Interfaces.IWordDocumentAdapter doc)
+        {
+            _styleEngine!.InitializeTargetStyles(profile, doc);
+            _numberingEngine!.CreateNumberingScheme(doc, profile.NumberingScheme);
+            _numberingEngine.BindStylesToNumbering(doc, profile);
+        }
     }
 }

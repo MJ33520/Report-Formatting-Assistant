@@ -14,7 +14,7 @@ namespace ReportForge.WordAdapter
 
         public WordListAdapter(Word.Document doc) { _doc = doc; }
 
-        public void CreateMultiLevelList(NumberingScheme scheme)
+        public bool CreateMultiLevelList(NumberingScheme scheme)
         {
             Word.ListTemplate template;
 
@@ -33,7 +33,7 @@ namespace ReportForge.WordAdapter
                     if (lt.Name == scheme.Id)
                     {
                         _currentTemplate = lt;
-                        return;
+                        return false; // 已存在，不需要重新绑定
                     }
                 }
                 // 找不到就用唯一名重新创建
@@ -60,6 +60,7 @@ namespace ReportForge.WordAdapter
             }
 
             _currentTemplate = template;
+            return true; // 新建，需要绑定
         }
 
         public void LinkStyleToListLevel(string styleId, int level)

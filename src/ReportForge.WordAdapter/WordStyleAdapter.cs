@@ -35,14 +35,16 @@ namespace ReportForge.WordAdapter
                 style = _doc.Styles.Add(def.StyleId, Word.WdStyleType.wdStyleTypeParagraph);
             }
 
-            // 设置显示名——安全方式，避免与内置样式名冲突
             try
             {
                 var desiredName = def.DisplayName.Get();
-                if (!string.IsNullOrEmpty(desiredName) && style.NameLocal != desiredName)
-                    style.NameLocal = desiredName;
+                if (!string.IsNullOrEmpty(desiredName) && style.NameLocal != desiredName && !style.NameLocal.StartsWith(desiredName + ","))
+                {
+                    // 使用别名机制，保留 StyleId 作为别名以便后续可以通过 StyleId 获取
+                    style.NameLocal = desiredName + "," + def.StyleId;
+                }
             }
-            catch { /* 显示名冲突时保留 StyleId 作为名字 */ }
+            catch { /* 显示名冲突时保留原有名字 */ }
 
             // 字体
             style.Font.NameFarEast = def.Font.Zh;

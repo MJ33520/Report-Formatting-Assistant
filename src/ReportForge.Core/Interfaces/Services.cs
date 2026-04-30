@@ -42,7 +42,7 @@ namespace ReportForge.Core.Interfaces
     /// <summary>编号引擎</summary>
     public interface INumberingEngine
     {
-        void CreateNumberingScheme(IWordDocumentAdapter doc, NumberingScheme scheme);
+        bool CreateNumberingScheme(IWordDocumentAdapter doc, NumberingScheme scheme);
         void BindStylesToNumbering(IWordDocumentAdapter doc, FormatProfile profile);
         void RebuildAllNumbering(IWordDocumentAdapter doc);
     }

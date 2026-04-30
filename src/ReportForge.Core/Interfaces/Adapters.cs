@@ -74,7 +74,7 @@ namespace ReportForge.Core.Interfaces
     /// <summary>多级列表适配器</summary>
     public interface IListAdapter
     {
-        void CreateMultiLevelList(NumberingScheme scheme);
+        bool CreateMultiLevelList(NumberingScheme scheme);
         void LinkStyleToListLevel(string styleId, int level);
         void RestartNumbering(IRangeAdapter range);
         void RemoveNumbering(IRangeAdapter range);

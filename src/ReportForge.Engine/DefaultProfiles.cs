@@ -62,7 +62,7 @@ namespace ReportForge.Engine
                         Font = new FontConfig { Zh = "楷体", Latin = "Times New Roman" },
                         FontSizePt = 16, // 三号
                         Bold = false, Alignment = TextAlignment.Left,
-                        FirstLineIndent = new IndentConfig { Unit = IndentUnit.Chars, Value = 2 },
+                        FirstLineIndent = new IndentConfig { Unit = IndentUnit.Chars, Value = 0 },
                         LineSpacing = new LineSpacingConfig { Rule = LineSpacingRule.Exact, Value = 30 },
                         IncludeInTOC = true, IncludeInNavPane = true
                     },

@@ -53,6 +53,8 @@ namespace ReportForge.WordAdapter
                 headerRow.Range.Font.Size = (float)config.HeaderRow.FontSizePt;
                 headerRow.Range.Font.Bold = config.HeaderRow.Bold ? 1 : 0;
                 headerRow.Range.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter;
+                headerRow.Range.ParagraphFormat.FirstLineIndent = 0;
+                headerRow.Range.ParagraphFormat.LeftIndent = 0;
                 headerRow.Range.ParagraphFormat.SpaceBefore = 0;
                 headerRow.Range.ParagraphFormat.SpaceAfter = 0;
                 // 表头行距也设为23磅固定
@@ -74,6 +76,8 @@ namespace ReportForge.WordAdapter
                 row.Range.Font.Bold = 0;
 
                 row.Range.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter;
+                row.Range.ParagraphFormat.FirstLineIndent = 0;
+                row.Range.ParagraphFormat.LeftIndent = 0;
                 row.Range.ParagraphFormat.SpaceBefore = 0;
                 row.Range.ParagraphFormat.SpaceAfter = 0;
 

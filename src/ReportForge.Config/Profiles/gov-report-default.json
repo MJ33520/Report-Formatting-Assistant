@@ -40,7 +40,7 @@
       "fontSizePt": 16.0,
       "bold": false,
       "alignment": "left",
-      "firstLineIndent": { "unit": "chars", "value": 2.0 },
+      "firstLineIndent": { "unit": "chars", "value": 0.0 },
       "lineSpacing": { "rule": "exact", "value": 30.0 },
       "includeInTOC": true, "includeInNavPane": true
     },

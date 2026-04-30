@@ -6,9 +6,9 @@ namespace ReportForge.Engine
     /// <summary>编号引擎——创建多级列表并绑定到标题样式</summary>
     public class NumberingEngine : INumberingEngine
     {
-        public void CreateNumberingScheme(IWordDocumentAdapter doc, NumberingScheme scheme)
+        public bool CreateNumberingScheme(IWordDocumentAdapter doc, NumberingScheme scheme)
         {
-            doc.Lists.CreateMultiLevelList(scheme);
+            return doc.Lists.CreateMultiLevelList(scheme);
         }
 
         public void BindStylesToNumbering(IWordDocumentAdapter doc, FormatProfile profile)

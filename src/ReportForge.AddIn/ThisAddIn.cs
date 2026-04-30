@@ -529,8 +529,11 @@ namespace ReportForge.AddIn
         private void EnsureStylesAndNumbering(Core.Models.FormatProfile profile, Core.Interfaces.IWordDocumentAdapter doc)
         {
             _styleEngine!.InitializeTargetStyles(profile, doc);
-            _numberingEngine!.CreateNumberingScheme(doc, profile.NumberingScheme);
-            _numberingEngine.BindStylesToNumbering(doc, profile);
+            bool isNew = _numberingEngine!.CreateNumberingScheme(doc, profile.NumberingScheme);
+            if (isNew)
+            {
+                _numberingEngine.BindStylesToNumbering(doc, profile);
+            }
         }
     }
 }
